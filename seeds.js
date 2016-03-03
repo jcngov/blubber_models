@@ -25,7 +25,7 @@ User.remove({}, function(err, results){
       } else {
         console.log(users);
       }
-  mongoo.connection.close();
+  mongoose.connection.close();
     })
 })
 
