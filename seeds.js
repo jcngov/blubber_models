@@ -18,16 +18,19 @@ Thread.remove({}, function(err, thread) {
         } else {
           console.log(users);
           var john = users[0];
+          var thur = users[2];
         }
 
         // create threads
 
-        Thread.create(
+        Thread.create([
           {name: "YOLO", creator: john},
+          {name: "Think Different", creator: thur}
+          ],
           function(err, thread) {
             if (err) console.log(err);
             console.log(thread);
-        mongoose.connection.close();
+          mongoose.connection.close();
         })
       });
   });
