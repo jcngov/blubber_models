@@ -11,6 +11,7 @@ Thread.find({}, function(err, thread){
   } else {
     console.log(thread);
   }
+  mongoose.connection.close();
 });
 //   User.findById(thread.creator, function(err, user) {
 //     console.log(user);
@@ -20,7 +21,6 @@ Thread.find({}, function(err, thread){
 // Thread.find({}).populate("creator").exec(function(err, thread) {
 //   if (err) console.log(err);
 //   console.log(thread);
-//   mongoose.connection.close();
 // });
 
 
